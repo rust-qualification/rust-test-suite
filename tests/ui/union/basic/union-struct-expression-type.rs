@@ -1,3 +1,5 @@
+//@ run-pass
+// 2.3.1.
 use std::any::type_name;
 use std::mem;
 
