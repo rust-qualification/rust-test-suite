@@ -1,0 +1,14 @@
+error: functions are not allowed in union definitions
+  --> $DIR/union-function.rs:6:9
+   |
+LL |     union MyUnion {
+   |           ------- while parsing this union
+...
+LL |         fn func() {}
+   |         ^^^^^^^^^^^^
+   |
+   = help: unlike in C++, Java, and C#, functions are declared in `impl` blocks
+   = help: see https://doc.rust-lang.org/book/ch05-03-method-syntax.html for more information
+
+error: aborting due to 1 previous error
+

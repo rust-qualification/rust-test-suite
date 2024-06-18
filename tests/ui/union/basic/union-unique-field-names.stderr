@@ -1,0 +1,11 @@
+error[E0124]: field `x` is already declared
+  --> $DIR/union-unique-field-names.rs:4:5
+   |
+LL |     x: u8,
+   |     ----- `x` first declared here
+LL |     x: u32,
+   |     ^^^^^^ field already declared
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0124`.
