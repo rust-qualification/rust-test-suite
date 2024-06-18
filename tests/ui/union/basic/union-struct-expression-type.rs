@@ -3,8 +3,12 @@
 use std::any::type_name;
 use std::mem;
 
-fn type_of<T>(_: &T) -> &'static str {
-    type_name::<T>()
+fn type_of<T>(_val: &T) -> &'static str {
+    let var_type = type_name::<T>();
+    match var_type.rfind("::") {
+        Some(i) => &var_type[i + 2..],
+        None => var_type,
+    }
 }
 
 #[repr(C)]
