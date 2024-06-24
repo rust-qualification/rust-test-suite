@@ -1,5 +1,6 @@
 //@ run-pass
-// 2.2.2.
+// Field Access Expressions: 643ad9f7-3e86-48ea-8493-a6741596206f
+// Field Access Expressions: e35147ab-017e-454f-b748-6b78f8c5063b
 #[repr(C)]
 union MyUnion {
     x: i32,

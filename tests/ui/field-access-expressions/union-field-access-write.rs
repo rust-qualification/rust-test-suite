@@ -1,5 +1,5 @@
 //@ run-pass
-// 2.2.3.
+// Field Access Expressions: 8512464b-4793-4901-8769-d674cedf1a69
 
 #[repr(C)]
 union MyUnion {

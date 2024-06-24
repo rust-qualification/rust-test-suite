@@ -1,5 +1,5 @@
 //@ run-pass
-// 2.2.1.
+// Field Access Expressions: 28e14f07-c0b9-4853-8412-e3b46335979f
 use std::any::type_name;
 
 fn type_of<T>(_: T) -> &'static str {

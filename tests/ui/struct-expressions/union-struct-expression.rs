@@ -14,7 +14,7 @@ fn main() {
     let shorthand_union = MyUnion { x };
 
     // 2.3.8.1
-    let mut new_union = unsafe { MyUnion { ..base_named_union } }; // ERROR
+    let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
     //~^ ERROR union expressions should have exactly one field
     //~| ERROR functional record update syntax requires a struct
 }

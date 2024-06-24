@@ -1,5 +1,6 @@
 //@ run-pass
-// 2.2.4.
+// Field Access Expressions: a80f79e0-2198-433e-951a-7555436fd041
+
 use std::mem;
 
 #[repr(C)]

@@ -1,5 +1,5 @@
 //@ run-pass
-// 1.1.3.
+// Bool Types: ee7018f0-eca6-4ec1-b645-ffb98940f3ac
 
 use std::mem;
 

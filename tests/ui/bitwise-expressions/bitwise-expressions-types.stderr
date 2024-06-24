@@ -1,0 +1,133 @@
+error[E0369]: no implementation for `f32 | f32`
+  --> $DIR/bitwise-expressions-types.rs:33:20
+   |
+LL |     let g_or_h = g | h;
+   |                  - ^ - f32
+   |                  |
+   |                  f32
+
+error[E0369]: no implementation for `f32 & f32`
+  --> $DIR/bitwise-expressions-types.rs:34:21
+   |
+LL |     let g_and_h = g & h;
+   |                   - ^ - f32
+   |                   |
+   |                   f32
+
+error[E0369]: no implementation for `f32 ^ f32`
+  --> $DIR/bitwise-expressions-types.rs:35:21
+   |
+LL |     let g_xor_h = g ^ h;
+   |                   - ^ - f32
+   |                   |
+   |                   f32
+
+error[E0600]: cannot apply unary operator `!` to type `f32`
+  --> $DIR/bitwise-expressions-types.rs:36:17
+   |
+LL |     let not_h = !h;
+   |                 ^^ cannot apply unary operator `!`
+
+error[E0369]: no implementation for `char | char`
+  --> $DIR/bitwise-expressions-types.rs:43:20
+   |
+LL |     let i_or_j = i | j;
+   |                  - ^ - char
+   |                  |
+   |                  char
+
+error[E0369]: no implementation for `char & char`
+  --> $DIR/bitwise-expressions-types.rs:44:21
+   |
+LL |     let i_and_j = i & j;
+   |                   - ^ - char
+   |                   |
+   |                   char
+
+error[E0369]: no implementation for `char ^ char`
+  --> $DIR/bitwise-expressions-types.rs:45:21
+   |
+LL |     let i_xor_j = i ^ j;
+   |                   - ^ - char
+   |                   |
+   |                   char
+
+error[E0600]: cannot apply unary operator `!` to type `char`
+  --> $DIR/bitwise-expressions-types.rs:46:17
+   |
+LL |     let not_j = !j;
+   |                 ^^ cannot apply unary operator `!`
+
+error[E0369]: no implementation for `String | String`
+  --> $DIR/bitwise-expressions-types.rs:54:20
+   |
+LL |     let k_or_l = k | l;
+   |                  - ^ - String
+   |                  |
+   |                  String
+
+error[E0369]: no implementation for `String & String`
+  --> $DIR/bitwise-expressions-types.rs:55:21
+   |
+LL |     let k_and_l = k & l;
+   |                   - ^ - String
+   |                   |
+   |                   String
+
+error[E0369]: no implementation for `String ^ String`
+  --> $DIR/bitwise-expressions-types.rs:56:21
+   |
+LL |     let k_xor_l = k ^ l;
+   |                   - ^ - String
+   |                   |
+   |                   String
+
+error[E0600]: cannot apply unary operator `!` to type `String`
+  --> $DIR/bitwise-expressions-types.rs:57:17
+   |
+LL |     let not_l = !l;   
+   |                 ^^ cannot apply unary operator `!`
+
+error[E0277]: no implementation for `i8 | bool`
+  --> $DIR/bitwise-expressions-types.rs:64:20
+   |
+LL |     let m_or_n = m | n;
+   |                    ^ no implementation for `i8 | bool`
+   |
+   = help: the trait `BitOr<bool>` is not implemented for `i8`
+   = help: the following other types implement trait `BitOr<Rhs>`:
+             `&'a i8` implements `BitOr<i8>`
+             `&i8` implements `BitOr<&i8>`
+             `i8` implements `BitOr<&i8>`
+             `i8` implements `BitOr`
+
+error[E0277]: no implementation for `i8 & bool`
+  --> $DIR/bitwise-expressions-types.rs:65:21
+   |
+LL |     let m_and_n = m & n;
+   |                     ^ no implementation for `i8 & bool`
+   |
+   = help: the trait `BitAnd<bool>` is not implemented for `i8`
+   = help: the following other types implement trait `BitAnd<Rhs>`:
+             `&'a i8` implements `BitAnd<i8>`
+             `&i8` implements `BitAnd<&i8>`
+             `i8` implements `BitAnd<&i8>`
+             `i8` implements `BitAnd`
+
+error[E0277]: no implementation for `i8 ^ bool`
+  --> $DIR/bitwise-expressions-types.rs:66:21
+   |
+LL |     let m_xor_n = m ^ n;
+   |                     ^ no implementation for `i8 ^ bool`
+   |
+   = help: the trait `BitXor<bool>` is not implemented for `i8`
+   = help: the following other types implement trait `BitXor<Rhs>`:
+             `&'a i8` implements `BitXor<i8>`
+             `&i8` implements `BitXor<&i8>`
+             `i8` implements `BitXor<&i8>`
+             `i8` implements `BitXor`
+
+error: aborting due to 15 previous errors
+
+Some errors have detailed explanations: E0277, E0369, E0600.
+For more information about an error, try `rustc --explain E0277`.

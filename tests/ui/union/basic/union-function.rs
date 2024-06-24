@@ -1,4 +1,3 @@
-
 fn main() {
     union MyUnion {
         field: u8,

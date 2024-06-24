@@ -1,13 +1,13 @@
 error[E0784]: union expressions should have exactly one field
   --> $DIR/union-struct-expression.rs:17:34
    |
-LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; // ERROR
+LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
    |                                  ^^^^^^^
 
 error[E0436]: functional record update syntax requires a struct
   --> $DIR/union-struct-expression.rs:17:46
    |
-LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; // ERROR
+LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
    |                                              ^^^^^^^^^^^^^^^^
 
 error: aborting due to 2 previous errors
