@@ -1,5 +1,5 @@
 //@ run-pass
-// 2.3.1.
+// Struct Expressions: b730fdae-7557-43a0-b8b8-08b6999519c5
 use std::any::type_name;
 use std::mem;
 

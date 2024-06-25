@@ -1,6 +1,6 @@
 //@ run-pass
 // Comparison expressions: 8c9f42c4-79b2-4017-ace4-81d08549c196
-use core::cmp::PartialOrd;
+use std::cmp::PartialOrd;
 
 pub fn main() {
     let a: bool = true;

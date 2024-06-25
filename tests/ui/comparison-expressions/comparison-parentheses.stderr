@@ -1,0 +1,13 @@
+error: comparison operators cannot be chained
+  --> $DIR/comparison-parentheses.rs:8:21
+   |
+LL |     let invalid = a == b == c;
+   |                     ^^   ^^
+   |
+help: split the comparison into two
+   |
+LL |     let invalid = a == b && b == c;
+   |                          ++++
+
+error: aborting due to 1 previous error
+

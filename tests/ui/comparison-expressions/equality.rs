@@ -1,6 +1,6 @@
 //@ run-pass
 // Comparison expressions: 04aa0dda-0706-44cb-9ab3-7945aeb58bb3
-use core::cmp::PartialEq;
+use std::cmp::PartialEq;
 
 pub fn main() {
     let a: bool = true;
