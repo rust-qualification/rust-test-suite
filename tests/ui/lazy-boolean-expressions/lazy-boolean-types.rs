@@ -10,12 +10,25 @@ pub fn main() {
 
     assert!(true && false);
     assert!(true || false);
-    assert!(1 && 1); //~ ERROR mismatched types
-    // assert!(1.5 && 1.5); //~ ERROR mismatched types
-    // assert!(1.5 && 1); //~ ERROR mismatched types
-    // assert!(false && 1); //~ ERROR mismatched types
-    // assert!('a' && 'b'); //~ ERROR mismatched types
-    // assert!('a' || true); //~ ERROR mismatched types
-    // assert!("alpha" && "beta"); //~ ERROR mismatched types
-    // assert!("alpha" || true); //~ ERROR mismatched types
+    assert!(1 && 1); 
+    //~^ ERROR mismatched types
+    //~| ERROR mismatched types
+    assert!(1.5 && 1.5); 
+    //~^ ERROR mismatched types
+    //~| ERROR mismatched types
+    assert!(1.5 && 1); 
+    //~^ ERROR mismatched types
+    //~| ERROR mismatched types    
+    assert!(false && 1); 
+    //~^ ERROR mismatched types
+    assert!('a' && 'b'); 
+    //~^ ERROR mismatched types
+    //~| ERROR mismatched types    
+    assert!('a' || true); 
+    //~^ ERROR mismatched types
+    assert!("alpha" && "beta");
+    //~^ ERROR mismatched types
+    //~| ERROR mismatched types     
+    assert!("alpha" || true); 
+    //~^ ERROR mismatched types
 }

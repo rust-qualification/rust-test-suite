@@ -1,13 +1,29 @@
-error[E0369]: no implementation for `f32 | f32`
-  --> $DIR/bitwise-expressions-types.rs:33:20
+error[E0369]: no implementation for `bool << bool`
+  --> $DIR/bitwise-expressions-types.rs:11:21
    |
-LL |     let g_or_h = g | h;
+LL |     let a_shift = a << b; 
+   |                   - ^^ - bool
+   |                   |
+   |                   bool
+
+error[E0369]: no implementation for `bool >> bool`
+  --> $DIR/bitwise-expressions-types.rs:13:21
+   |
+LL |     let b_shift = a >> b; 
+   |                   - ^^ - bool
+   |                   |
+   |                   bool
+
+error[E0369]: no implementation for `f32 | f32`
+  --> $DIR/bitwise-expressions-types.rs:40:20
+   |
+LL |     let g_or_h = g | h; 
    |                  - ^ - f32
    |                  |
    |                  f32
 
 error[E0369]: no implementation for `f32 & f32`
-  --> $DIR/bitwise-expressions-types.rs:34:21
+  --> $DIR/bitwise-expressions-types.rs:42:21
    |
 LL |     let g_and_h = g & h;
    |                   - ^ - f32
@@ -15,7 +31,7 @@ LL |     let g_and_h = g & h;
    |                   f32
 
 error[E0369]: no implementation for `f32 ^ f32`
-  --> $DIR/bitwise-expressions-types.rs:35:21
+  --> $DIR/bitwise-expressions-types.rs:44:21
    |
 LL |     let g_xor_h = g ^ h;
    |                   - ^ - f32
@@ -23,13 +39,29 @@ LL |     let g_xor_h = g ^ h;
    |                   f32
 
 error[E0600]: cannot apply unary operator `!` to type `f32`
-  --> $DIR/bitwise-expressions-types.rs:36:17
+  --> $DIR/bitwise-expressions-types.rs:46:17
    |
 LL |     let not_h = !h;
    |                 ^^ cannot apply unary operator `!`
 
+error[E0369]: no implementation for `f32 << f32`
+  --> $DIR/bitwise-expressions-types.rs:48:21
+   |
+LL |     let g_shift = g << h; 
+   |                   - ^^ - f32
+   |                   |
+   |                   f32
+
+error[E0369]: no implementation for `f32 >> f32`
+  --> $DIR/bitwise-expressions-types.rs:50:21
+   |
+LL |     let h_shift = g >> h; 
+   |                   - ^^ - f32
+   |                   |
+   |                   f32
+
 error[E0369]: no implementation for `char | char`
-  --> $DIR/bitwise-expressions-types.rs:43:20
+  --> $DIR/bitwise-expressions-types.rs:57:20
    |
 LL |     let i_or_j = i | j;
    |                  - ^ - char
@@ -37,7 +69,7 @@ LL |     let i_or_j = i | j;
    |                  char
 
 error[E0369]: no implementation for `char & char`
-  --> $DIR/bitwise-expressions-types.rs:44:21
+  --> $DIR/bitwise-expressions-types.rs:59:21
    |
 LL |     let i_and_j = i & j;
    |                   - ^ - char
@@ -45,7 +77,7 @@ LL |     let i_and_j = i & j;
    |                   char
 
 error[E0369]: no implementation for `char ^ char`
-  --> $DIR/bitwise-expressions-types.rs:45:21
+  --> $DIR/bitwise-expressions-types.rs:61:21
    |
 LL |     let i_xor_j = i ^ j;
    |                   - ^ - char
@@ -53,13 +85,29 @@ LL |     let i_xor_j = i ^ j;
    |                   char
 
 error[E0600]: cannot apply unary operator `!` to type `char`
-  --> $DIR/bitwise-expressions-types.rs:46:17
+  --> $DIR/bitwise-expressions-types.rs:63:17
    |
 LL |     let not_j = !j;
    |                 ^^ cannot apply unary operator `!`
 
+error[E0369]: no implementation for `char << char`
+  --> $DIR/bitwise-expressions-types.rs:65:21
+   |
+LL |     let i_shift = i << j; 
+   |                   - ^^ - char
+   |                   |
+   |                   char
+
+error[E0369]: no implementation for `char >> char`
+  --> $DIR/bitwise-expressions-types.rs:67:21
+   |
+LL |     let j_shift = i >> j; 
+   |                   - ^^ - char
+   |                   |
+   |                   char
+
 error[E0369]: no implementation for `String | String`
-  --> $DIR/bitwise-expressions-types.rs:54:20
+  --> $DIR/bitwise-expressions-types.rs:75:20
    |
 LL |     let k_or_l = k | l;
    |                  - ^ - String
@@ -67,7 +115,7 @@ LL |     let k_or_l = k | l;
    |                  String
 
 error[E0369]: no implementation for `String & String`
-  --> $DIR/bitwise-expressions-types.rs:55:21
+  --> $DIR/bitwise-expressions-types.rs:77:21
    |
 LL |     let k_and_l = k & l;
    |                   - ^ - String
@@ -75,7 +123,7 @@ LL |     let k_and_l = k & l;
    |                   String
 
 error[E0369]: no implementation for `String ^ String`
-  --> $DIR/bitwise-expressions-types.rs:56:21
+  --> $DIR/bitwise-expressions-types.rs:79:21
    |
 LL |     let k_xor_l = k ^ l;
    |                   - ^ - String
@@ -83,13 +131,29 @@ LL |     let k_xor_l = k ^ l;
    |                   String
 
 error[E0600]: cannot apply unary operator `!` to type `String`
-  --> $DIR/bitwise-expressions-types.rs:57:17
+  --> $DIR/bitwise-expressions-types.rs:81:17
    |
 LL |     let not_l = !l;   
    |                 ^^ cannot apply unary operator `!`
 
+error[E0369]: no implementation for `String << String`
+  --> $DIR/bitwise-expressions-types.rs:83:21
+   |
+LL |     let k_shift = k << l; 
+   |                   - ^^ - String
+   |                   |
+   |                   String
+
+error[E0369]: no implementation for `String >> String`
+  --> $DIR/bitwise-expressions-types.rs:85:21
+   |
+LL |     let l_shift = k >> l; 
+   |                   - ^^ - String
+   |                   |
+   |                   String
+
 error[E0277]: no implementation for `i8 | bool`
-  --> $DIR/bitwise-expressions-types.rs:64:20
+  --> $DIR/bitwise-expressions-types.rs:94:20
    |
 LL |     let m_or_n = m | n;
    |                    ^ no implementation for `i8 | bool`
@@ -102,7 +166,7 @@ LL |     let m_or_n = m | n;
              `i8` implements `BitOr`
 
 error[E0277]: no implementation for `i8 & bool`
-  --> $DIR/bitwise-expressions-types.rs:65:21
+  --> $DIR/bitwise-expressions-types.rs:96:21
    |
 LL |     let m_and_n = m & n;
    |                     ^ no implementation for `i8 & bool`
@@ -115,7 +179,7 @@ LL |     let m_and_n = m & n;
              `i8` implements `BitAnd`
 
 error[E0277]: no implementation for `i8 ^ bool`
-  --> $DIR/bitwise-expressions-types.rs:66:21
+  --> $DIR/bitwise-expressions-types.rs:98:21
    |
 LL |     let m_xor_n = m ^ n;
    |                     ^ no implementation for `i8 ^ bool`
@@ -127,7 +191,43 @@ LL |     let m_xor_n = m ^ n;
              `i8` implements `BitXor<&i8>`
              `i8` implements `BitXor`
 
-error: aborting due to 15 previous errors
+error[E0277]: no implementation for `i8 << bool`
+  --> $DIR/bitwise-expressions-types.rs:100:21
+   |
+LL |     let m_shift = m << n; 
+   |                     ^^ no implementation for `i8 << bool`
+   |
+   = help: the trait `Shl<bool>` is not implemented for `i8`
+   = help: the following other types implement trait `Shl<Rhs>`:
+             `&'a i8` implements `Shl<i128>`
+             `&'a i8` implements `Shl<i16>`
+             `&'a i8` implements `Shl<i32>`
+             `&'a i8` implements `Shl<i64>`
+             `&'a i8` implements `Shl<i8>`
+             `&'a i8` implements `Shl<isize>`
+             `&'a i8` implements `Shl<u128>`
+             `&'a i8` implements `Shl<u16>`
+           and 40 others
+
+error[E0277]: no implementation for `i8 >> bool`
+  --> $DIR/bitwise-expressions-types.rs:102:21
+   |
+LL |     let n_shift = m >> n; 
+   |                     ^^ no implementation for `i8 >> bool`
+   |
+   = help: the trait `Shr<bool>` is not implemented for `i8`
+   = help: the following other types implement trait `Shr<Rhs>`:
+             `&'a i8` implements `Shr<i128>`
+             `&'a i8` implements `Shr<i16>`
+             `&'a i8` implements `Shr<i32>`
+             `&'a i8` implements `Shr<i64>`
+             `&'a i8` implements `Shr<i8>`
+             `&'a i8` implements `Shr<isize>`
+             `&'a i8` implements `Shr<u128>`
+             `&'a i8` implements `Shr<u16>`
+           and 40 others
+
+error: aborting due to 25 previous errors
 
 Some errors have detailed explanations: E0277, E0369, E0600.
 For more information about an error, try `rustc --explain E0277`.

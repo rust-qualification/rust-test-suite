@@ -37,6 +37,8 @@ fn main() {
     assert_eq!(third, 3.14);
 
     // invalid field access 
-    let _ = p.0;
+    let _ = p.0; 
+    //~^ ERROR no field `0` on type `Point`
     let _ = my_tuple.first;
+    //~^ ERROR no field `first` on type `({integer}, &str, {float})`
 }

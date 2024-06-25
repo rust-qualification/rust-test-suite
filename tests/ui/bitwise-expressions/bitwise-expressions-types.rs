@@ -45,9 +45,9 @@ pub fn main() {
     //~^ ERROR no implementation for `f32 ^ f32`
     let not_h = !h;
     //~^ ERROR cannot apply unary operator `!` to type `f32`
-    let g_shift = e << f; 
+    let g_shift = g << h; 
     //~^ ERROR no implementation for `f32 << f32`
-    let h_shift = e >> f; 
+    let h_shift = g >> h; 
     //~^ ERROR no implementation for `f32 >> f32`
     
     // invalid types

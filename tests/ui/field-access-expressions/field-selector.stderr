@@ -1,0 +1,20 @@
+error[E0609]: no field `0` on type `Point`
+  --> $DIR/field-selector.rs:40:15
+   |
+LL |     let _ = p.0; 
+   |               ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = p.x; 
+   |               ~
+
+error[E0609]: no field `first` on type `({integer}, &str, {float})`
+  --> $DIR/field-selector.rs:42:22
+   |
+LL |     let _ = my_tuple.first;
+   |                      ^^^^^ unknown field
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0609`.

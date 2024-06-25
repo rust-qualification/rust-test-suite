@@ -3,8 +3,8 @@
 use std::ops::Shl;
 
 pub fn main() {
-    let num = MyNumber(3);
+    let num = 3;
     let result = num << 2;
-    assert_eq!(result.0, 12); 
-    assert_eq!(result.0, std::ops::Shl::shl(num, 2)); 
+    assert_eq!(result, 12); 
+    assert_eq!(result, Shl::shl(num, 2)); 
 }
