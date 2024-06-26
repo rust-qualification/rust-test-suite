@@ -1,3 +1,4 @@
+// Union Types
 //@ run-pass
 
 union MyUnion {

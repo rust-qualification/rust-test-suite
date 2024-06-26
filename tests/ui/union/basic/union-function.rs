@@ -1,3 +1,4 @@
+// Union Types
 fn main() {
     union MyUnion {
         field: u8,
