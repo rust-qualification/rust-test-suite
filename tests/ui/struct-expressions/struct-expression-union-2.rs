@@ -9,10 +9,6 @@ union MyUnion {
 
 fn main() {
     let base_named_union = MyUnion { x: 5 };
-
-    let x: i32 = 5;
-    let shorthand_union = MyUnion { x };
-
     let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
     //~^ ERROR union expressions should have exactly one field
     //~| ERROR functional record update syntax requires a struct
@@ -20,6 +16,7 @@ fn main() {
     let named_union_two_fields = MyUnion { x: 5, y: 1.2 };
     //~^ ERROR union expressions should have exactly one field
 
+    let x: i32 = 5;
     let y: f64 = 5.2;
     let shorthand_union_two_fields = MyUnion { x, y };
     //~^ ERROR union expressions should have exactly one field

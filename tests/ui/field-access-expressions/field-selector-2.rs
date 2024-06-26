@@ -13,32 +13,14 @@ union MyUnion {
 
 fn main() {
     let p = Point { x: 1, y: 2 };
-    let x = p.x;
-    let y = p.y;
-    assert_eq!(x, 10);
-    assert_eq!(y, 20);
-
-    let mut u = MyUnion { x: 42 };
-    unsafe {
-        let a = u.x;
-        u.y = 1.2;
-        let b = u.y;
-    }
-
-
+    let mut my_union = MyUnion { x: 42 };
     let my_tuple = (3, "hi", 1.2);
-    
-    let first = my_tuple.0;
-    let second = my_tuple.1;
-    let third = my_tuple.2;
-    
-    assert_eq!(first, 42);
-    assert_eq!(second, "hello");
-    assert_eq!(third, 3.14);
 
     // invalid field access 
+    let _ = my_union.1;
+    //~^ ERROR no field `1` on type `Point`
     let _ = p.0; 
-    //~^ ERROR no field `0` on type `Point`
+    //~^ ERROR no field `0` on type `MyUnion`
     let _ = my_tuple.first;
     //~^ ERROR no field `first` on type `({integer}, &str, {float})`
 }

@@ -5,11 +5,6 @@ use std::any::type_name;
 use std::any::type_name_of_val;
 
 pub fn main() {
-    let result: bool = true && true;
-    assert_eq!(type_name::<bool>(), type_name_of_val(&result));
-
-    assert!(true && false);
-    assert!(true || false);
     assert!(1 && 1); 
     //~^ ERROR mismatched types
     //~| ERROR mismatched types
