@@ -1,6 +1,6 @@
 //@ run-pass
 // Comparison expressions: 99af6d58-c504-41dd-a325-9341bd0ae9a8
-
+#[allow(unused_variables)]
 pub fn main() {
     let x = 1;
     let y = 2;

@@ -1,0 +1,31 @@
+error[E0609]: no field `1` on type `MyUnion`
+  --> $DIR/field-selector-2.rs:20:22
+   |
+LL |     let _ = my_union.1;
+   |                      ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_union.x;
+   |                      ~
+
+error[E0609]: no field `0` on type `Point`
+  --> $DIR/field-selector-2.rs:22:23
+   |
+LL |     let _ = my_struct.0; 
+   |                       ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_struct.x; 
+   |                       ~
+
+error[E0609]: no field `first` on type `({integer}, &str, {float})`
+  --> $DIR/field-selector-2.rs:24:22
+   |
+LL |     let _ = my_tuple.first;
+   |                      ^^^^^ unknown field
+
+error: aborting due to 3 previous errors
+
+For more information about this error, try `rustc --explain E0609`.

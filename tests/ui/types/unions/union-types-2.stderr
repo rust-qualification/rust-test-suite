@@ -1,0 +1,63 @@
+error[E0740]: field must implement `Copy` or be wrapped in `ManuallyDrop<...>` to be used in a union
+  --> $DIR/union-types-2.rs:9:9
+   |
+LL |         x: String,
+   |         ^^^^^^^^^
+   |
+   = note: union fields must not have drop side-effects, which is currently enforced via either `Copy` or `ManuallyDrop<...>`
+help: wrap the field type in `ManuallyDrop<...>`
+   |
+LL |         x: std::mem::ManuallyDrop<String>,
+   |            +++++++++++++++++++++++      +
+
+error[E0740]: field must implement `Copy` or be wrapped in `ManuallyDrop<...>` to be used in a union
+  --> $DIR/union-types-2.rs:20:9
+   |
+LL |         x: DropType,
+   |         ^^^^^^^^^^^
+   |
+   = note: union fields must not have drop side-effects, which is currently enforced via either `Copy` or `ManuallyDrop<...>`
+help: wrap the field type in `ManuallyDrop<...>`
+   |
+LL |         x: std::mem::ManuallyDrop<DropType>,
+   |            +++++++++++++++++++++++        +
+
+error[E0740]: field must implement `Copy` or be wrapped in `ManuallyDrop<...>` to be used in a union
+  --> $DIR/union-types-2.rs:24:9
+   |
+LL |         x: [String; 3],
+   |         ^^^^^^^^^^^^^^
+   |
+   = note: union fields must not have drop side-effects, which is currently enforced via either `Copy` or `ManuallyDrop<...>`
+help: wrap the field type in `ManuallyDrop<...>`
+   |
+LL |         x: std::mem::ManuallyDrop<[String; 3]>,
+   |            +++++++++++++++++++++++           +
+
+error[E0740]: field must implement `Copy` or be wrapped in `ManuallyDrop<...>` to be used in a union
+  --> $DIR/union-types-2.rs:28:9
+   |
+LL |         x: (String, f64),
+   |         ^^^^^^^^^^^^^^^^
+   |
+   = note: union fields must not have drop side-effects, which is currently enforced via either `Copy` or `ManuallyDrop<...>`
+help: wrap the field type in `ManuallyDrop<...>`
+   |
+LL |         x: std::mem::ManuallyDrop<(String, f64)>,
+   |            +++++++++++++++++++++++             +
+
+error[E0740]: field must implement `Copy` or be wrapped in `ManuallyDrop<...>` to be used in a union
+  --> $DIR/union-types-2.rs:32:9
+   |
+LL |         x: T,
+   |         ^^^^
+   |
+   = note: union fields must not have drop side-effects, which is currently enforced via either `Copy` or `ManuallyDrop<...>`
+help: wrap the field type in `ManuallyDrop<...>`
+   |
+LL |         x: std::mem::ManuallyDrop<T>,
+   |            +++++++++++++++++++++++ +
+
+error: aborting due to 5 previous errors
+
+For more information about this error, try `rustc --explain E0740`.

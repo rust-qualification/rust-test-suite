@@ -1,6 +1,6 @@
 //@ run-pass
 // Bitwise expressions: 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688
-
+#[allow(unused_variables)]
 pub fn main() {
     let a: bool = true;
     let b: bool = false;

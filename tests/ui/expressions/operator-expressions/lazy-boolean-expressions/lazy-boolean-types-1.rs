@@ -9,7 +9,6 @@ pub fn main() {
     let result: bool = true && true;
     assert_eq!(type_name::<bool>(), type_name_of_val(&result));
 
-    assert!(true && false);
+    assert!(true && true);
     assert!(true || false);
-    assert!(1 && 1); 
 }

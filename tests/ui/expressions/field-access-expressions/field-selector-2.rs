@@ -12,15 +12,15 @@ union MyUnion {
 }
 
 fn main() {
-    let p = Point { x: 1, y: 2 };
-    let mut my_union = MyUnion { x: 42 };
+    let my_struct = Point { x: 1, y: 2 };
+    let mut my_union = MyUnion { x: 5 };
     let my_tuple = (3, "hi", 1.2);
 
     // invalid field access 
     let _ = my_union.1;
-    //~^ ERROR no field `1` on type `Point`
-    let _ = p.0; 
-    //~^ ERROR no field `0` on type `MyUnion`
+    //~^ ERROR no field `1` on type `MyUnion`
+    let _ = my_struct.0; 
+    //~^ ERROR no field `0` on type `Point`
     let _ = my_tuple.first;
     //~^ ERROR no field `first` on type `({integer}, &str, {float})`
 }

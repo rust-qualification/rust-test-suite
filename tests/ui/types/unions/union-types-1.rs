@@ -6,7 +6,7 @@
 // Union Types: d1b5850a-f09d-4785-9d56-6ec53d7cfccf
 use std::mem::ManuallyDrop; 
 
-
+#[allow(dead_code)]
 fn main() {
     union CopyUnion {
         x: u32,

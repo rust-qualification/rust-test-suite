@@ -1,5 +1,5 @@
 error: functions are not allowed in union definitions
-  --> $DIR/union-function.rs:5:9
+  --> $DIR/union-function.rs:6:9
    |
 LL |     union MyUnion {
    |           ------- while parsing this union
