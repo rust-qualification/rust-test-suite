@@ -4,7 +4,7 @@ error[E0308]: mismatched types
 LL |     let employee = Employee(
    |                    -------- arguments to this struct are incorrect
 LL |         "Maria".to_string(),   
-LL |         "Maria".to_string(),                       
+LL |         "Maria".to_string(),
    |         ^^^^^^^^^^^^^^^^^^^ expected `i32`, found `String`
    |
 note: tuple struct defined here

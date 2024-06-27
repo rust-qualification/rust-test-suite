@@ -19,4 +19,8 @@ fn main() {
     //~^ ERROR no field `1` on type `MyUnion`
     let _ = my_struct.0; 
     //~^ ERROR no field `0` on type `Point`
+    let _ = my_union.z;
+    //~^ no field `z` on type `MyUnion`
+    let _ = my_struct.z; 
+    //~^ ERROR no field `z` on type `Point`
 }
