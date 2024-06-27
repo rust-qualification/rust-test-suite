@@ -10,7 +10,7 @@ struct Employee {
 fn main() {
     let maria = Employee {
         name: "maria".to_string(),
-        age: "maria".to_string(),
+        age: "maria".to_string(), //~ ERROR mismatched types
         salary: 50_000,
-    }; //~^ ERROR mismatched types
+    }; 
 }

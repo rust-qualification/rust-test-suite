@@ -4,7 +4,7 @@ struct Employee(String, i32, i32);
 fn main() {
     let employee = Employee(
         "Maria".to_string(),   
-        "Maria".to_string(),                       
+        "Maria".to_string(), //~ ERROR mismatched types                    
         50000                     
-    ); //~^ ERROR mismatched types
+    ); 
 }

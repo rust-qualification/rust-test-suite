@@ -14,7 +14,7 @@ fn main() {
 
     let _maria = Employee {
         name: name.clone(),
-        age,
+        age, //~ ERROR mismatched types
         salary,
-    }; //~^ ERROR mismatched types
+    }; 
 }
