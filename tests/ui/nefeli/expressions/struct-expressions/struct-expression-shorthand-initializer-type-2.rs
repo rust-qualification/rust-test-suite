@@ -16,6 +16,5 @@ fn main() {
         name: name.clone(),
         age,
         salary,
-    };
-    //~^ ERROR mismatched types
+    }; //~^ ERROR mismatched types
 }

@@ -12,6 +12,5 @@ fn main() {
         name: "maria".to_string(),
         age: "maria".to_string(),
         salary: 50_000,
-    };
-    //~^ ERROR mismatched types
+    }; //~^ ERROR mismatched types
 }

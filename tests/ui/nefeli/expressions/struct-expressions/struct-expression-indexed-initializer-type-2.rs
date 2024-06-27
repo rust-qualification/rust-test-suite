@@ -6,6 +6,5 @@ fn main() {
         "Maria".to_string(),   
         "Maria".to_string(),                       
         50000                     
-    );
-    //~^ ERROR mismatched types
+    ); //~^ ERROR mismatched types
 }

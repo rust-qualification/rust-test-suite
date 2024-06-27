@@ -1,0 +1,16 @@
+error[E0784]: union expressions should have exactly one field
+  --> $DIR/struct-expression-union-base-initializer.rs:9:34
+   |
+LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
+   |                                  ^^^^^^^
+
+error[E0436]: functional record update syntax requires a struct
+  --> $DIR/struct-expression-union-base-initializer.rs:9:46
+   |
+LL |     let mut new_union = unsafe { MyUnion { ..base_named_union } }; 
+   |                                              ^^^^^^^^^^^^^^^^
+
+error: aborting due to 2 previous errors
+
+Some errors have detailed explanations: E0436, E0784.
+For more information about an error, try `rustc --explain E0436`.

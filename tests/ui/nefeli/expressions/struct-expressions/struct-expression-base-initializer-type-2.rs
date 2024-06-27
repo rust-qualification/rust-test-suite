@@ -20,6 +20,5 @@ fn main() {
     let miguel = Employee {
         name: "miguel".to_string(),
         ..maria
-    };
-    //~^ ERROR mismatched types
+    }; //~^ ERROR mismatched types
 }

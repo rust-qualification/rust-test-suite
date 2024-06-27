@@ -1,0 +1,25 @@
+error[E0609]: no field `1` on type `MyUnion`
+  --> $DIR/field-selector-structs-unions-2.rs:18:22
+   |
+LL |     let _ = my_union.1;
+   |                      ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_union.x;
+   |                      ~
+
+error[E0609]: no field `0` on type `Point`
+  --> $DIR/field-selector-structs-unions-2.rs:20:23
+   |
+LL |     let _ = my_struct.0; 
+   |                       ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_struct.x; 
+   |                       ~
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0609`.
