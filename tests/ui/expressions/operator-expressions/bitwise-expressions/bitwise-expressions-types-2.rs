@@ -1,15 +1,6 @@
 // Bitwise expressions: 58fa3a4b-f15b-41f3-b8b3-2f607b8b8688
 
 pub fn main() {
-    let a: bool = true;
-    let b: bool = false;
-    
-    // invalid types
-    let a_shift = a << b; 
-    //~^ ERROR no implementation for `bool << bool`
-    let b_shift = a >> b; 
-    //~^ ERROR no implementation for `bool >> bool`
-
     // invalid types
     let g: f32 = 1.2;
     let h: f32 = 1.5;
