@@ -20,6 +20,28 @@ help: a field with a similar name exists
 LL |     let _ = my_struct.x; 
    |                       ~
 
-error: aborting due to 2 previous errors
+error[E0609]: no field `z` on type `MyUnion`
+  --> $DIR/field-selector-structs-unions-2.rs:22:22
+   |
+LL |     let _ = my_union.z;
+   |                      ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_union.x;
+   |                      ~
+
+error[E0609]: no field `z` on type `Point`
+  --> $DIR/field-selector-structs-unions-2.rs:24:23
+   |
+LL |     let _ = my_struct.z; 
+   |                       ^ unknown field
+   |
+help: a field with a similar name exists
+   |
+LL |     let _ = my_struct.x; 
+   |                       ~
+
+error: aborting due to 4 previous errors
 
 For more information about this error, try `rustc --explain E0609`.

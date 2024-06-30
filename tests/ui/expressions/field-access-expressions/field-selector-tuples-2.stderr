@@ -4,6 +4,12 @@ error[E0609]: no field `first` on type `({integer}, &str, {float})`
 LL |     let _ = my_tuple.first;
    |                      ^^^^^ unknown field
 
-error: aborting due to 1 previous error
+error[E0609]: no field `3` on type `({integer}, &str, {float})`
+  --> $DIR/field-selector-tuples-2.rs:7:22
+   |
+LL |     let _ = my_tuple.3;
+   |                      ^ unknown field
+
+error: aborting due to 2 previous errors
 
 For more information about this error, try `rustc --explain E0609`.

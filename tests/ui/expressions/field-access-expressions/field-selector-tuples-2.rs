@@ -5,5 +5,5 @@ fn main() {
     let _ = my_tuple.first;
     //~^ ERROR no field `first` on type `({integer}, &str, {float})`
     let _ = my_tuple.3;
-    //~^ ERROR no field `first` on type `({integer}, &str, {float})`
+    //~^ ERROR no field `3` on type `({integer}, &str, {float})`
 }
