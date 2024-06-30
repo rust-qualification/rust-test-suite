@@ -7,8 +7,11 @@ pub fn main() {
     // invalid types
     let m_or_n = m | n;
     //~^ ERROR mismatched types
+    //~| no implementation for `u8 | i8`
     let m_and_n = m & n;
     //~^ ERROR mismatched types
+    //~| no implementation for `u8 & i8`
     let m_xor_n = m ^ n;
     //~^ ERROR mismatched types
+    //~| no implementation for `u8 ^ i8`
 }

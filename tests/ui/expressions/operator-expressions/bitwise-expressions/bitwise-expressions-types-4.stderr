@@ -1,0 +1,61 @@
+error[E0308]: mismatched types
+  --> $DIR/bitwise-expressions-types-4.rs:8:22
+   |
+LL |     let m_or_n = m | n;
+   |                      ^ expected `u8`, found `i8`
+
+error[E0277]: no implementation for `u8 | i8`
+  --> $DIR/bitwise-expressions-types-4.rs:8:20
+   |
+LL |     let m_or_n = m | n;
+   |                    ^ no implementation for `u8 | i8`
+   |
+   = help: the trait `BitOr<i8>` is not implemented for `u8`
+   = help: the following other types implement trait `BitOr<Rhs>`:
+             `&'a u8` implements `BitOr<u8>`
+             `&u8` implements `BitOr<&u8>`
+             `u8` implements `BitOr<&u8>`
+             `u8` implements `BitOr`
+
+error[E0308]: mismatched types
+  --> $DIR/bitwise-expressions-types-4.rs:10:23
+   |
+LL |     let m_and_n = m & n;
+   |                       ^ expected `u8`, found `i8`
+
+error[E0277]: no implementation for `u8 & i8`
+  --> $DIR/bitwise-expressions-types-4.rs:10:21
+   |
+LL |     let m_and_n = m & n;
+   |                     ^ no implementation for `u8 & i8`
+   |
+   = help: the trait `BitAnd<i8>` is not implemented for `u8`
+   = help: the following other types implement trait `BitAnd<Rhs>`:
+             `&'a u8` implements `BitAnd<u8>`
+             `&u8` implements `BitAnd<&u8>`
+             `u8` implements `BitAnd<&u8>`
+             `u8` implements `BitAnd`
+
+error[E0308]: mismatched types
+  --> $DIR/bitwise-expressions-types-4.rs:12:23
+   |
+LL |     let m_xor_n = m ^ n;
+   |                       ^ expected `u8`, found `i8`
+
+error[E0277]: no implementation for `u8 ^ i8`
+  --> $DIR/bitwise-expressions-types-4.rs:12:21
+   |
+LL |     let m_xor_n = m ^ n;
+   |                     ^ no implementation for `u8 ^ i8`
+   |
+   = help: the trait `BitXor<i8>` is not implemented for `u8`
+   = help: the following other types implement trait `BitXor<Rhs>`:
+             `&'a u8` implements `BitXor<u8>`
+             `&u8` implements `BitXor<&u8>`
+             `u8` implements `BitXor<&u8>`
+             `u8` implements `BitXor`
+
+error: aborting due to 6 previous errors
+
+Some errors have detailed explanations: E0277, E0308.
+For more information about an error, try `rustc --explain E0277`.
