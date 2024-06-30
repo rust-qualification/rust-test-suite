@@ -1,0 +1,19 @@
+error[E0369]: no implementation for `bool << bool`
+  --> $DIR/bitwise-expressions-types-3.rs:8:21
+   |
+LL |     let a_shift = a << b; 
+   |                   - ^^ - bool
+   |                   |
+   |                   bool
+
+error[E0369]: no implementation for `bool >> bool`
+  --> $DIR/bitwise-expressions-types-3.rs:10:21
+   |
+LL |     let b_shift = a >> b; 
+   |                   - ^^ - bool
+   |                   |
+   |                   bool
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0369`.
