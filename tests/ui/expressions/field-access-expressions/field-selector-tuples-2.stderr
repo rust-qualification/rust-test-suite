@@ -10,6 +10,12 @@ error[E0609]: no field `3` on type `({integer}, &str, {float})`
 LL |     let _ = my_tuple.3;
    |                      ^ unknown field
 
-error: aborting due to 2 previous errors
+error[E0609]: no field `0` on type `()`
+  --> $DIR/field-selector-tuples-2.rs:10:25
+   |
+LL |     let _ = empty_tuple.0;
+   |                         ^ unknown field
+
+error: aborting due to 3 previous errors
 
 For more information about this error, try `rustc --explain E0609`.

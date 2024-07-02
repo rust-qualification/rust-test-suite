@@ -6,4 +6,7 @@ fn main() {
     //~^ ERROR no field `first` on type `({integer}, &str, {float})`
     let _ = my_tuple.3;
     //~^ ERROR no field `3` on type `({integer}, &str, {float})`
+    let empty_tuple = ();
+    let _ = empty_tuple.0;
+    //~^ ERROR no field `0` on type `()`
 }
